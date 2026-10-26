@@ -1,0 +1,6 @@
+{
+  "name": "Domaine Olivier Leflaive - Livret Parcellaire",
+  "description": "Application terrain mobile pour les vendangeurs du Domaine Olivier Leflaive : consultation du livret parcellaire, recherche instantanée (parcelle, code, propriétaire OPALE, rangs), géolocalisation et guidage GPS Google Maps.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

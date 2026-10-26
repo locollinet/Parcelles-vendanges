@@ -1,0 +1,60 @@
+{
+  "entities": {
+    "ParcelOverride": {
+      "title": "ParcelOverride",
+      "description": "Overrides and harvest notes on a parcel",
+      "type": "object",
+      "properties": {
+        "statut_recolte": {
+          "type": "string",
+          "enum": ["a_faire", "en_cours", "recolte"]
+        },
+        "caisses_recoltees": {
+          "type": "number"
+        },
+        "kg_recoltes": {
+          "type": "number"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "vigneron": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": "string"
+        }
+      }
+    },
+    "CustomParcel": {
+      "title": "CustomParcel",
+      "description": "Custom parcel feature added by user",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "geometry": {
+          "type": "object"
+        },
+        "properties": {
+          "type": "object"
+        }
+      },
+      "required": ["type", "geometry", "properties"]
+    }
+  },
+  "firestore": {
+    "/overrides/{overrideId}": {
+      "schema": "ParcelOverride",
+      "description": "Parcel field overrides and harvest progression status"
+    },
+    "/custom_parcelles/{parcelId}": {
+      "schema": "CustomParcel",
+      "description": "User created custom parcel features"
+    }
+  }
+}
